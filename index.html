@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Libreriras necesarias para el uso de bootstrap para estilos y funcionamiento-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.2/jquery.min.js"></script>
+    <script src="https:maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Arreglo JSON</title>
+
+    <script src=funcion.js></script>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <br/>
+            <h1 style="text-align: center">Formulario registro de usuarios</h1>
+            <br/>
+            <!--Inicio formulario lado izquierdo de la pantalla para ingreso de datos de registro-->
+            <div class="col-sm-6">
+                <h3 style="text-align: center">Ingrese sus datos</h3>
+
+                <form id="nuevo-registro">
+
+                    <div class="form-group" style="text-align: center">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="Ingrese su nombre" aria-label="Ingrese su nombre" aria-describedby="basic-addon1" class="form-control"
+                            style="text-align: center" id="nombre" />
+                    </div>
+
+                    <div class="form-group" style="text-align: center">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" placeholder="Ingrese su apellido" aria-label="Ingrese su apellido" aria-describedby="basic-addon1" class="form-control"
+                            style="text-align: center" id="apellido" />
+                    </div>
+
+                    <div class="form-group" style="text-align: center">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" placeholder="Ingrese su teléfono" aria-label="Ingrese su teléfon" aria-describedby="basic-addon1" class="form-control"
+                            style="text-align: center" id="telefono" />
+                    </div>
+                    <br/>
+                    <!--Boton para en el envio de datos, se tiene en cuenta que el tipo submit
+                         para recoger toda la informacion de lso campos de texto-->
+                    <input type="submit" value="Añadir registro" class="btn btn-success" style="position:center; width:100%; left:0; text-align:center;margin:auto;"
+                    />
+                </form>
+
+            </div>
+            <!--Fin formulario lado izquierdo de la pantalla para ingreso de datos de registro-->
+
+            <!--Inicio formulario lado derecho de la pantalla para mostrar los datos de registro-->
+            <div class="col-sm-6">
+                <h3 style="text-align: center">Observe sus datos</h3>
+                <br/>
+                <div id="tabla-clasificacion">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registros-tabla">
+
+                        </tbody>
+
+
+                    </table>
+                </div>
+
+                <!-- Boton de para mostrar tabla luego de ingresar
+                     los datos en el formulario izquierdo-->
+                <button class="btn btn-primary" style="position:center; width:100%; left:0; text-align:center;margin:auto;" id="mostrar-tabla">Mostrar
+                    tabla</button>
+            </div>
+            <!--Fin formulario lado derecho de la pantalla para mostrar los datos de registro-->
+        </div>
+    </div>
+</body>
+
+</html>
